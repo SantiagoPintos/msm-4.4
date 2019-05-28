@@ -653,7 +653,7 @@ static int fg_get_battery_temp(struct fg_chip *chip, int *val)
 
 	/* Value is in Kelvin; Convert it to deciDegC */
 	temp = (temp - 273) * 10;
-		pr_err("LCT TEMP=%d\n",temp);
+		pr_debug("LCT TEMP=%d\n",temp);
 
 	if (temp < -80){
 		switch (temp){
