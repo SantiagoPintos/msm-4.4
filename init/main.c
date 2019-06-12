@@ -542,8 +542,10 @@ asmlinkage __visible void __init start_kernel(void)
 	p= strstr(boot_command_line,"androidboot.fpsensor=fpc");
 	if(p){
 		fpsensor = 1;
+		pr_info("Fingerprint sensor: FPC\n");
 	}else{
 		fpsensor = 2;
+		pr_info("Fingerprint sensor: Goodix\n");
 	}
 	parse_early_param();
 	after_dashes = parse_args("Booting kernel",
