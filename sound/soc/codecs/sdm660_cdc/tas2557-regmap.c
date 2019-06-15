@@ -499,8 +499,6 @@ static void irq_work_routine(struct work_struct *work)
 		}
 		pTAS2557->mnErrCode &= ~ERROR_CLASSD_PWR;
 
-		dev_dbg(pTAS2557->dev, "%s: INT1=0x%x, INT2=0x%x; PowerUpFlag=0x%x\n",
-			__func__, nDevInt1Status, nDevInt2Status, nDevPowerUpFlag);
 		goto end;
 	}
 
